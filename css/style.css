@@ -17,7 +17,7 @@ ul {
     padding: 0;
 }
 
-/* ---------- 상단 바 ---------- */
+/* 상단 바  */
 header {
     position: sticky;
     top: 0;
@@ -51,7 +51,7 @@ header {
     text-decoration: underline;
 }
 
-/* ---------- 메뉴 화면 ---------- */
+/* 메뉴 화면 */
 main {
     padding: 20px 80px;
 }
@@ -129,7 +129,7 @@ main > p {
     background-color: #6D28D9;
 }
 
-/* ---------- 상세 화면 ---------- */
+/* 상세 화면  */
 .back a {
     color: #7C3AED;
     font-weight: 700;
@@ -173,7 +173,7 @@ main > p {
     margin-top: auto;
 }
 
-/* 주문하기 / 처음으로 : 같은 버튼 */
+/* 주문하기 , 처음으로 : 같은 버튼 */
 .order {
     width: 320px;
     max-width: 100%;
@@ -192,7 +192,7 @@ main > p {
     background-color: #6D28D9;
 }
 
-/* ---------- 완료 화면 ---------- */
+/* 완료 화면  */
 #content {
     display: flex;
     justify-content: center;
