@@ -1,3 +1,7 @@
+/* ---------- 기본 정리 ---------- */
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
@@ -16,7 +20,7 @@ ul {
     padding: 0;
 }
 
-/* 상단 바 */
+/* ---------- 상단 바 ---------- */
 header {
     position: sticky;
     top: 0;
@@ -50,7 +54,7 @@ header {
     text-decoration: underline;
 }
 
-/* 메뉴 화면 */
+/* ---------- 메뉴 화면 ---------- */
 main {
     padding: 20px 80px;
 }
@@ -112,7 +116,23 @@ main > p {
     font-size: 12px;
     font-weight: 700;
 }
-/* 상세 화면  */
+.top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 100;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #7C3AED;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+.top:hover {
+    background-color: #6D28D9;
+}
+
+/* ---------- 상세 화면 ---------- */
 .back a {
     color: #7C3AED;
     font-weight: 700;
@@ -156,7 +176,7 @@ main > p {
     margin-top: auto;
 }
 
-/* 주문하기, 처음으로 : 같은 버튼 */
+/* 주문하기 / 처음으로 : 같은 버튼 */
 .order {
     width: 320px;
     max-width: 100%;
@@ -175,7 +195,7 @@ main > p {
     background-color: #6D28D9;
 }
 
-/* 완료 화면  */
+/* ---------- 완료 화면 ---------- */
 #content {
     display: flex;
     justify-content: center;
@@ -222,4 +242,56 @@ main > p {
 .done-text {
     margin: 0 0 32px;
     line-height: 1.6;
+}
+
+/* 24강과 기존 카페 웹의 화면 폭별 배치를 적용한다. */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .nav {
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        font-size: 14px;
+    }
+    main {
+        padding: 24px 20px;
+    }
+    main > h2 {
+        font-size: 26px;
+    }
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    .detail-menu-grid .menu-card:target {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .detail-menu-grid .image {
+        flex: auto;
+        height: 220px;
+        font-size: 80px;
+    }
+    .info {
+        flex: auto;
+    }
+    .detail-menu-grid .name {
+        margin-top: 0;
+        font-size: 28px;
+    }
+    .detail-menu-grid .price {
+        font-size: 22px;
+    }
+    .order {
+        width: 100%;
+    }
+    .done {
+        padding: 32px 24px;
+    }
+    .done h2 {
+        font-size: 26px;
+    }
 }
